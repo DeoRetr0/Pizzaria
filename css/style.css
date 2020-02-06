@@ -1,0 +1,137 @@
+/** 
+font-family: 'Bebas Neue', cursive;
+font-family: 'Roboto Condensed', sans-serif; 
+#295F2D #FFE67C #FEE715 #006B38
+**/
+
+/*Suposto menu flutuante*/
+.menu{
+  width: 100%;
+  height: 60px;
+  background: #414146;
+  float: left;
+  z-index: 9999;
+  position:fixed;
+}
+
+.center{
+  width: 70%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.center ul{
+  width: 70%;
+  height: 60px;
+  float: left;
+}
+
+.center ul li{
+  width: 50px;
+  padding: 20px 35px;
+  list-style: none;
+  float: left;
+  text-align: center;
+  color:#fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size:13px;
+}
+
+.center ul li:first-child{
+  background-color: #ffea00;
+  color: #414146 !important;
+  border-right: 1px solid #414146;
+}
+
+.center ul li:hover{
+  background-color: #ffea00;
+  transition: all 0.3s;
+  color: #414146;
+  cursor: pointer;
+}
+
+/*Fim do menu flutuante*/
+
+/*Menu hamburguer*/
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.barra1, .barra2, .barra3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Roda a primeira barra */
+.change .barra1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* apaga a segunda barra */
+.change .barra2 {
+  opacity: 0;
+}
+
+/* roda a ultima barra */
+.change .barra3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/*Fim do menu hamburguer*/
+
+body, html {
+  height: 150%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+  /** essa parte do body seria para ajudar no display mobile **/
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-image {
+  /* "linear-gradient" escurece a imagem e facilita a leitura */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/imagens/pizza1.jpg");
+  height: 50%;
+  /* compatibilidade com multiplas telas*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* texto centralizado */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.creditos{
+  background-color:black;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display:inline-block;
+  border-radius:3px"
+}
+
+.item1{
+  text-align: center;
+}
