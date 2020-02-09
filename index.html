@@ -20,17 +20,25 @@
 	<link href="js/render.js" rel="text/javascript/">
 	<!-- JS DO AJAX-->
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<!-- JS DO HEADER QUE SOME -->
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
     <script>
 		//carrega a pagina indicada 
 		$(document).ready(function(){
-			$(".loja").click(function(){
-				$("#box").load("lojas");
+			$(".contato-pizza").click(function(){
+				$("#box").load("contatos");
 			});
 		});
+
+		//faz com que o header suma
+		$("header" ).click(function() {
+  			$( this ).slideUp();
+		});
 	</script>
-	<title>A Brasileira Pizzaria</title>
+	<link rel="icon" href="imagens/icon.png">
+	<title>A Brasileira - Pizzaria</title>
 </head>
 
 <body>
@@ -46,7 +54,7 @@
 				<a><li>Promoções</li></a>
 				<button class="loja">Lojas</button>
 				<a><li>Cardápio</li></a>
-				<a><li>Contatos</li></a>
+				<a class="contato-pizza"><li>Contatos</li></a>
 			</ul>
 		</div>
 	</div>
@@ -79,6 +87,10 @@
 					<div>
 						<span>Fotos por:</span>
 						<a title="Visite a pagina do Mahyar Motebassem" href="https://unsplash.com/@mahyarmotebassem?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank"><span>Mahyar Motebassem</span></a>
+					</div>
+					<div>
+						Icons made by 
+						<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 					</div>
 				</div>
 			</div>
