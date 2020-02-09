@@ -3,8 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--Bootstrap CSS/JS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	 crossorigin="anonymous">
@@ -19,7 +18,10 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/rodape-prin.css" rel="stylesheet">
 	<link href="js/render.js" rel="text/javascript/">
-	<script src="js/jquery-3.4.1.min.js" rel="text/javascript"></script>
+	<!-- JS DO AJAX-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<!-- JS DO HEADER QUE SOME -->
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
 	<title>A Brasileira Pizzaria</title>
@@ -34,15 +36,16 @@
 		</div>
 		<div class="center">
 			<ul>
-				<a href="javascript::" onclick="load_page('index.html');"><li>Sobre</li></a>
-				<a href="javascript::" onclick="load_page('promocoes.html');"><li>Promoções</li></a>
-				<a href="javascript::" onclick="load_page('cardapio.html');"><li>Cardápio</li></a>
-				<a href="javascript::" onclick="load_page('lojas.html');"><li>Lojas</li></a>
-				<a href="javascript::" onclick="load_page('contatos.html');"><li>Contatos</li></a>
+				<a><li></li>Sobre</li></a>
+				<a><li>Promoções</li></a>
+				<button class="loja">Lojas</button>
+				<a><li>Cardápio</li></a>
+				<a><li>Contatos</li></a>
 			</ul>
 		</div>
 	</div>
 
+	<!-- HEADER DE APRESENTAÇÃO -->
 	<header id="sobre" class="hero-image">
 		<div class="hero-text">
 			<h1>A Brasileira</h1>
@@ -50,7 +53,8 @@
 		</div>
 	</header>
 
-	<div id="pagina_retorno"></div>
+	<!-- AS OUTRAS PAGINAS SÃO CARREGADAS AQUI DENTRO -->
+	<div id="box"></div>
 
 	<footer class="footer">
 		<div class="footer-conteudo">
@@ -94,19 +98,17 @@
 			&copy; CodaMais+ 2020
 		</div>
 	</footer>
-	<script type="text/javascript">
-	function load_page(arquivo){
-		if(arquivo){
-			$.ajax({
-			type: 'GET',
-			data: '',
-			url: arquivo,
-			success: function(data){
-				$("#pagina_retorno").html(data);
-			}
+	<script>
+		//carrega a pagina indicada 
+		$(document).ready(function(){
+			$(".loja").click(function(){
+				$("#box").load("lojas");
 			});
-		}
-	}
+		});
+		//faz com que o header suma
+		$("header" ).click(function() {
+  			$( this ).slideUp();
+		});
 	</script>
 </body>
 </html>

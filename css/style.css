@@ -169,7 +169,7 @@ body{
   left: 0px;
   padding-top: 10px;
 }
-/* FOOTER AJUSTES */
+/* AJUSTES */
 
 .footer-section p{
   width: 500px;
@@ -205,8 +205,9 @@ a{
   height: 105px;
 }
 
-#pagina_retorno{
-  width: 400px;
-  height: 500px;
+#box{
+  width: 100%;
+  display: block;
+  overflow: auto;
   background-color: red;
 }
