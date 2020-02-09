@@ -1,2 +1,3 @@
 baseurl: ""
 url: "https://deoretr0.github.io/"
+theme: jekyll-theme-slate
