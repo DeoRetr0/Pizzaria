@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Bootstrap CSS/JS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	 crossorigin="anonymous"></script>
+	<!-- CSS/JS -->
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/rodape-prin.css" rel="stylesheet">
+	<link href="js/render.js" rel="text/javascript/">
+	<!-- JS DO AJAX-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
+    <script>
+		//carrega a pagina indicada 
+		$(document).ready(function(){
+			$(".loja").click(function(){
+				$("#box").load("lojas");
+			});
+		});
+	</script>
+	<title>A Brasileira Pizzaria</title>
+</head>
+
+<body>
+	<div class="menu">
+		<div class="container" onclick="myFunction(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<div class="center">
+			<ul>
+				<a><li></li>Sobre</li></a>
+				<a><li>Promoções</li></a>
+				<button class="loja">Lojas</button>
+				<a><li>Cardápio</li></a>
+				<a><li>Contatos</li></a>
+			</ul>
+		</div>
+	</div>
+
+	<!-- HEADER DE APRESENTAÇÃO -->
+	<header id="sobre" class="hero-image">
+		<div class="hero-text">
+			<h1>A Brasileira</h1>
+			<p>A Brasileira é uma pizzaria que une o sabor que o brasileiro gosta com o preço que o brasileiro ama!</p>
+		</div>
+	</header>
+
+	<!-- AS OUTRAS PAGINAS SÃO CARREGADAS AQUI DENTRO -->
+	<div id="box"></div>
+
+	<footer class="footer">
+		<div class="footer-conteudo">
+			<div class="footer-section sobre">
+				<img id="logo" src="imagens/Codamais-logo.png" alt="Logo da CodaMais"/>
+				<p>Formada por estudantes do curso de Sistemas para Internet, a empresa
+					busca trazer serviços de qualidade a preços que cabem no bolso!
+				</p>
+				<div class="email">
+					<span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; codamais.ej@gmail.com</span>
+					<div class="sociais">
+						<a href="www.instagram.com/codamais"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-facebook-square"></i></a>
+					</div>
+					<div>
+						<span>Fotos por:</span>
+						<a title="Visite a pagina do Mahyar Motebassem" href="https://unsplash.com/@mahyarmotebassem?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank"><span>Mahyar Motebassem</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-section contato">
+				<h2>Fale conosco!</h2>
+				<form action="index.html" method="post">
+					<div class="form-group">
+						<input type="email" name="email" class="form-control" placeholder="Insira seu email..."/>
+					</div>
+					<div class="form-group">
+						<textarea name="mensagem" class="form-control" placeholder="O que quer nos dizer?"></textarea>
+					</div>
+					<button type="submit" class="btn btn-big">
+					<i class="fa fa-envelope"></i>
+					Enviar
+					</button>
+				</form>
+			</div>
+
+		</div>
+
+		<div class="footer-fim">
+			&copy; CodaMais+ 2020
+		</div>
+	</footer>
+</body>
+</html>
