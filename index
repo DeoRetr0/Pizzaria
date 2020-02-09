@@ -18,10 +18,10 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/rodape-prin.css" rel="stylesheet">
-	<link href="js/render.js" rel="text/javascript">
-	<link href="js/jquery-3.4.1.min.js" rel="jquery">
+	<link href="js/render.js" rel="text/javascript/">
+	<script src="js/jquery-3.4.1.min.js" rel="text/javascript"></script>
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
 	<title>A Brasileira Pizzaria</title>
 </head>
 
@@ -34,11 +34,11 @@
 		</div>
 		<div class="center">
 			<ul>
-				<a href="#sobre"><li>Sobre</li></a>
-				<a><li>Promoções</li></a>
-				<a><li>Cardápio</li></a>
-				<a><li>Lojas</li></a>
-				<a><li>Contatos</li></a>
+				<a href="javascript::" onclick="load_page('index.html');"><li>Sobre</li></a>
+				<a href="javascript::" onclick="load_page('promocoes.html');"><li>Promoções</li></a>
+				<a href="javascript::" onclick="load_page('cardapio.html');"><li>Cardápio</li></a>
+				<a href="javascript::" onclick="load_page('lojas.html');"><li>Lojas</li></a>
+				<a href="javascript::" onclick="load_page('contatos.html');"><li>Contatos</li></a>
 			</ul>
 		</div>
 	</div>
@@ -50,14 +50,12 @@
 		</div>
 	</header>
 
-	<div id="pagina_retorno">
-
-	</div>
+	<div id="pagina_retorno"></div>
 
 	<footer class="footer">
 		<div class="footer-conteudo">
 			<div class="footer-section sobre">
-				<h1 class="marca">CodaMais+</h1>
+				<img id="logo" src="imagens/Codamais-logo.png" alt="Logo da CodaMais"/>
 				<p>Formada por estudantes do curso de Sistemas para Internet, a empresa
 					busca trazer serviços de qualidade a preços que cabem no bolso!
 				</p>
@@ -78,7 +76,7 @@
 				<h2>Fale conosco!</h2>
 				<form action="index.html" method="post">
 					<div class="form-group">
-						<input type="email" name="email" class="form-control" placeholder="Insira seu email...">
+						<input type="email" name="email" class="form-control" placeholder="Insira seu email..."/>
 					</div>
 					<div class="form-group">
 						<textarea name="mensagem" class="form-control" placeholder="O que quer nos dizer?"></textarea>
@@ -96,6 +94,19 @@
 			&copy; CodaMais+ 2020
 		</div>
 	</footer>
-
+	<script type="text/javascript">
+	function load_page(arquivo){
+		if(arquivo){
+			$.ajax({
+			type: 'GET',
+			data: '',
+			url: arquivo,
+			success: function(data){
+				$("#pagina_retorno").html(data);
+			}
+			});
+		}
+	}
+	</script>
 </body>
 </html>

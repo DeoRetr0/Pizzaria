@@ -137,8 +137,8 @@ body{
 }
 
 .footer{
-  background: #295F2D;
-  color: #d3d3d3;
+  background: white;
+  color: #212121;
   height: 300px;
   width: 100%;
   position: relative;
@@ -179,14 +179,14 @@ body{
   width: 300px;
 }
 .fa{
-  color: white;
+  color: rgb(10, 191, 247);
   padding: 5px;
   margin-bottom: 5px;
 }
 
 a{
  text-decoration: none;
- color: white;
+ color: #221111;
 }
 
 .btn{
@@ -200,3 +200,13 @@ a{
    
 }
 
+#logo{
+  width: 280px;
+  height: 105px;
+}
+
+#pagina_retorno{
+  width: 400px;
+  height: 500px;
+  background-color: red;
+}
