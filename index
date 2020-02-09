@@ -109,6 +109,7 @@
 		$("header" ).click(function() {
   			$( this ).slideUp();
 		});
+		
 	</script>
 </body>
 </html>
