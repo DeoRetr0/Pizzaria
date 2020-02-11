@@ -3,8 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!--Bootstrap CSS/JS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	 crossorigin="anonymous">
@@ -18,17 +17,47 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/rodape-prin.css" rel="stylesheet">
-	<link href="js/render.js" rel="text/javascript">
-	<link href="js/jquery-3.4.1.min.js" rel="jquery">
+	<link href="js/render.js" rel="text/javascript/">
+	<!-- JS DO AJAX-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<!-- JS DO HEADER QUE SOME -->
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet">
-	<title>A Brasileira Pizzaria</title>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
+    <script>
+		//carrega a pagina indicada 
+		$(document).ready(function(){
+			$(".contato-pizza").click(function(){
+				$("#box").load("contatos");
+			});
+		});
+
+		//faz com que o header suma
+		$("header" ).click(function() {
+  			$( this ).slideUp();
+		});
+	</script>
+	<link rel="icon" href="imagens/icon.png">
+	<title>A Brasileira - Pizzaria</title>
 </head>
 
 <body>
 	
 	<input type="checkbox" id="bt_menu">
 	<label for="bt_menu">&#9776;</label>
+
+	<!-- BOT -->
+	 <script
+            SameSite="none Secure"
+            src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"
+        ></script>
+        <script>
+            var myLandbot = new LandbotPopup({
+    index: 'https://landbot.io/u/H-365810-7ICM5VE91KH2D3BB/index.html',
+  });
+        </script>
+	
+
 	<div class="menu">
 		<div class="center">
 			<ul>
@@ -41,6 +70,7 @@
 		</div>
 	</div>
 
+	<!-- HEADER DE APRESENTAÇÃO -->
 	<header id="sobre" class="hero-image">
 		<div class="hero-text">
 			<h1>A Brasileira</h1>
@@ -48,21 +78,20 @@
 		</div>
 	</header>
 
-	<div id="pagina_retorno">
-
-	</div>
+	<!-- AS OUTRAS PAGINAS SÃO CARREGADAS AQUI DENTRO -->
+	<div id="box"></div>
 
 	<footer class="footer">
 		<div class="footer-conteudo">
 			<div class="footer-section sobre">
-				<h1 class="marca">CodaMais+</h1>
+				<img id="logo" src="imagens/Codamais-logo.png" alt="Logo da CodaMais"/>
 				<p>Formada por estudantes do curso de Sistemas para Internet, a empresa
 					busca trazer serviços de qualidade a preços que cabem no bolso!
 				</p>
 				<div class="email">
 					<span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; codamais.ej@gmail.com</span>
 					<div class="sociais">
-						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="www.instagram.com/codamais"><i class="fa fa-instagram"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 						<a href="#"><i class="fa fa-facebook-square"></i></a>
 					</div>
@@ -70,13 +99,17 @@
 						<span>Fotos por:</span>
 						<a title="Visite a pagina do Mahyar Motebassem" href="https://unsplash.com/@mahyarmotebassem?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank"><span>Mahyar Motebassem</span></a>
 					</div>
+					<div>
+						Icons made by 
+						<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+					</div>
 				</div>
 			</div>
 			<div class="footer-section contato">
 				<h2>Fale conosco!</h2>
 				<form action="index.html" method="post">
 					<div class="form-group">
-						<input type="email" name="email" class="form-control" placeholder="Insira seu email...">
+						<input type="email" name="email" class="form-control" placeholder="Insira seu email..."/>
 					</div>
 					<div class="form-group">
 						<textarea name="mensagem" class="form-control" placeholder="O que quer nos dizer?"></textarea>
@@ -94,6 +127,5 @@
 			&copy; CodaMais+ 2020
 		</div>
 	</footer>
-
 </body>
 </html>
