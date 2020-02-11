@@ -23,26 +23,27 @@
 		<!-- JS DO HEADER QUE SOME -->
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed|Bungee|Suez+One&display=swap" rel="stylesheet"/>
     <script>
 		//carrega a pagina indicada 
 		$(document).ready(function(){
 			$("#box").hide();
-			$(".contato-pizza").click(function(){
+			$(".contatos").click(function(){
 				$("#box").load("contatos.html").fadeToggle().show();
-				$("#sobre").slideUp();
+				$("#sobre").fadeOut();
 			});
-			$(".promocoes").click(function(){
-				$("#box").load("promocoes.html").fadeToggle().show();
+			$(".lojas").click(function(){
+				$("#box").load("lojas.html").fadeToggle().show();
+				$("#sobre").fadeOut();
 			});
 			$(".cardapio").click(function(){
 				$("#box").load("cardapio.html").fadeToggle().show();
+				$("#sobre").fadeOut();
 			});
-		//faz com que o header suma
 			$(".sobre").click(function(){
-				$("#sobre").fadeToggle();
+				$("#box").hide();
+				$("#sobre").fadeIn();
 			});
-			
 		});
 	</script>
 	<link rel="icon" href="imagens/icon.png">
@@ -69,11 +70,10 @@
 	<div class="menu">
 		<div class="center">
 			<ul>
-				<li><a href="#sobre">Sobre</a></li>
-				<li><a href="#promocoes">Promoções</a></li>
-				<li><a href="#cardapio">Cardápio</a></li>
-				<li><a href="#lojas">Lojas</a></li>
-				<li><a href="#contatos">Contatos</a></li>
+				<li class="sobre"><a>Sobre</a></li>
+				<li class="cardapio"><a>Cardápio</a></li>
+				<li class="lojas"><a>Lojas</a></li>
+				<li class="contatos"><a>Contatos</a></li>
 			</ul>
 		</div>
 	</div>
@@ -81,7 +81,7 @@
 	<!-- HEADER DE APRESENTAÇÃO -->
 	<header id="sobre" class="hero-image" alt="Foto de pizza por Mahyar Motebassem">
 		<div class="hero-text">
-			<h1>A Brasileira</h1>
+			<h1>A Brasileira!</h1>
 			<p>A Brasileira é uma pizzaria que une o sabor que o brasileiro gosta com o preço que o brasileiro ama!</p>
 		</div>
 	</header>
@@ -99,13 +99,12 @@
 				<div class="email">
 					<span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; codamais.ej@gmail.com</span>
 					<div class="sociais">
-						<a href="www.instagram.com/codamais"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-facebook-square"></i></a>
+						<a href="https://www.instagram.com/codamais/" target="_blank"><i class="fa fa-instagram"></i></a>
+						<a href="https://br.linkedin.com/in/codamais-ej-do-ifb-595367197" target="_blank"><i class="fa fa-linkedin"></i></a>
 					</div>
 					<div>
 						Icons made by 
-						<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+						<a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 					</div>
 				</div>
 			</div>
