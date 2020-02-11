@@ -1,7 +1,7 @@
 /** 
 font-family: 'Bebas Neue', cursive;
 font-family: 'Roboto Condensed', sans-serif; 
-#F2AB3A #FFE67C #FEE715 #006B38
+#295f2d #FFE67C #FEE715 #006B38
 **/
 
 /*Suposto menu flutuante (hahahaha)*/
@@ -11,7 +11,7 @@ font-family: 'Roboto Condensed', sans-serif;
 .menu{
   width: 100%;
   height: 60px;
-  background: #F2AB3A;
+  background: #295f2d;
   font-family: 'Roboto Condensed', sans-serif; 
   float: left;
   z-index: 9999;
@@ -39,7 +39,7 @@ font-family: 'Roboto Condensed', sans-serif;
   list-style: none;
   float: left;
   text-align: center;
-  color:#F2AB3A;
+  color:#295f2d;
   font-family: 'Roboto Condensed', sans-serif;
   font-size:15 px;
 }
@@ -63,7 +63,7 @@ font-family: 'Roboto Condensed', sans-serif;
 label[for='bt_menu']{
   margin: 0;
 	padding:5px;
-	background-color:#F2AB3A;
+	background-color:#295f2d;
 	color:#000;
 	font-family:'Roboto Condensed', sans-serif;
 	text-align: center;
@@ -75,7 +75,7 @@ label[for='bt_menu']{
 }
 
 label[for='bt_menu']:hover{
-	background-color:#F2AB3A;
+	background-color:#295f2d;
 	color:#fff;
 }
 
@@ -104,7 +104,7 @@ label[for='bt_menu']:hover{
   label[for='bt_menu']{
     display:block;
     width: 100%;
-    background: #F2AB3A;
+    background: #295f2d;
     }
 
   .menu>ul{
@@ -114,7 +114,7 @@ label[for='bt_menu']:hover{
   .menu ul li{
     width:100%;
     float:none;
-    background: #F2AB3A;
+    background: #295f2d;
     }
 
   .menu ul ul{
@@ -183,7 +183,7 @@ body{
 }
 
 .footer{
-  background: #F2AB3A;
+  background: #295f2d;
   color: #d3d3d3;
   height: 300px;
   width: 100%;
