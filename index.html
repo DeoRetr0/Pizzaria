@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -34,11 +34,11 @@
 			});
 			$(".lojas").click(function(){
 				$("#box").load("lojas.html").fadeToggle().show();
-				$("#sobre").hide();
+				$("#sobre").fadeOut();
 			});
 			$(".cardapio").click(function(){
 				$("#box").load("cardapio.html").fadeToggle().show();
-				$("#sobre").hide();
+				$("#sobre").fadeOut();
 			});
 			$(".sobre").click(function(){
 				$("#box").hide();

@@ -2,55 +2,21 @@
   <div id="conteudo">
     <br><br>
     <h2>Não sabe onde nos achar🤔?</h2>
-    <!--Tentativa de um Carrossel simples-->
-    <div class="container">
-      <div class="wall wall-1" id="wall-1">
-        <a href="#wall-3">Voltar</a>
-        <img
-          id="img1"
-          src="imagens/img1.png"
-          alt="foto da pizzaria de forma ampla"
-        />
-        <a href="#wall-2">Avançar</a>
-      </div>
-
-      <div class="wall wall-2" id="wall-2">
-        <a href="#wall-1">Voltar</a>
-        <img
-          id="img2"
-          src="imagens/img2.png"
-          alt="fotos internas da pizzaria"
-        />
-        <a href="#wall-3">Avançar</a>
-      </div>
-
-      <div class="wall wall-3" id="wall-3">
-        <a href="#wall-2">Voltar</a>
-        <img
-          id="img3"
-          src="imagens/img3.png"
-          alt="fotos das comidas da pizzaria"
-        />
-        <a href="#wall-1">Avançar</a>
-      </div>
-    </div>
-    <!--até aqui-->
-
-    <h2>Confira nossa localização abaixo👇</h2>
+    <div>Confira nossa localização abaixo👇</div>
     <br/>
     <div id="mapa">
-      <h2>Confira nossos endereços</h2>
+      <h3>Confira nossos endereços</h3>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2715.249101004283!2d-47.88046432532723!3d-15.754201736346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3b1e02415707%3A0x3060d8a3139ab079!2sInstituto%20Federal%20de%20Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1581306037500!5m2!1spt-BR!2sbr"
-        width="700"
+        width="600"
         height="500"
         frameborder="0"
         style="border:0;"
         allowfullscreen="true"
       ></iframe>
     </div>
-    <br />
-    <br />
+    <br/>
+    <br/>
   </div>
 
   <style>
@@ -66,10 +32,8 @@
       text-align: center;
       vertical-align: auto;
       margin: 0 auto;
-      margin-top: 60px;
       color: white;
     }
-
     #mapa {
       width: 50%;
       margin: auto;
@@ -77,27 +41,12 @@
       text-align: center;
     }
 
-    h2 {
+    h3 {
       font-size: 1.5em;
       font-family: 'Bungee', cursive;
       color: #212121;
       background-color: #FFE67C;
       text-align: center;
-    }
-
-    .container {
-      width: 150px;
-      height: 150px;
-    }
-
-    .wall {
-      display: none;
-      width: 100%;
-      height: 100%;
-    }
-
-    .wall:target {
-      display: block;
     }
   </style>
 </div>
