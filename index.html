@@ -27,14 +27,22 @@
     <script>
 		//carrega a pagina indicada 
 		$(document).ready(function(){
+			$("#box").hide();
 			$(".contato-pizza").click(function(){
-				$("#box").load("contatos");
+				$("#box").load("contatos.html").fadeToggle().show();
+				$("#sobre").slideUp();
 			});
-		});
-
+			$(".promocoes").click(function(){
+				$("#box").load("promocoes.html").fadeToggle().show();
+			});
+			$(".cardapio").click(function(){
+				$("#box").load("cardapio.html").fadeToggle().show();
+			});
 		//faz com que o header suma
-		$("header" ).click(function() {
-  			$( this ).slideUp();
+			$(".sobre").click(function(){
+				$("#sobre").fadeToggle();
+			});
+			
 		});
 	</script>
 	<link rel="icon" href="imagens/icon.png">
@@ -61,17 +69,17 @@
 		</div>
 		<div class="center">
 			<ul>
-				<a><li></li>Sobre</li></a>
-				<a><li>Promoções</li></a>
-				<button class="loja">Lojas</button>
-				<a><li>Cardápio</li></a>
+				<button class="sobre">Sobre</button>
+				<a class="promocoes"><li>Promoções</li></a>
+				<button class="lojas">Lojas</button>
+				<a class="cardapio"><li>Cardápio</li></a>
 				<a class="contato-pizza"><li>Contatos</li></a>
 			</ul>
 		</div>
 	</div>
 
 	<!-- HEADER DE APRESENTAÇÃO -->
-	<header id="sobre" class="hero-image">
+	<header id="sobre" class="hero-image" alt="Foto de pizza por Mahyar Motebassem">
 		<div class="hero-text">
 			<h1>A Brasileira</h1>
 			<p>A Brasileira é uma pizzaria que une o sabor que o brasileiro gosta com o preço que o brasileiro ama!</p>
@@ -94,10 +102,6 @@
 						<a href="www.instagram.com/codamais"><i class="fa fa-instagram"></i></a>
 						<a href="#"><i class="fa fa-linkedin"></i></a>
 						<a href="#"><i class="fa fa-facebook-square"></i></a>
-					</div>
-					<div>
-						<span>Fotos por:</span>
-						<a title="Visite a pagina do Mahyar Motebassem" href="https://unsplash.com/@mahyarmotebassem?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank"><span>Mahyar Motebassem</span></a>
 					</div>
 					<div>
 						Icons made by 
