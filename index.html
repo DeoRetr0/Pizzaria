@@ -3,85 +3,104 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Bootstrap CSS/JS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	 crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	 crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootstrap CSS/JS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 	<!-- CSS/JS -->
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
 	<link href="css/rodape-prin.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/foto/foto.css">
+	<link rel="stylesheet" href="css/foto/foto-botao.css">
+	<link rel="stylesheet" href="css/foto/foto-conteudo.css">
+	<link rel="stylesheet" href="css/foto/foto-descricao.css">
+	<link rel="stylesheet" href="css/foto/foto-imagem.css">
+	<link rel="stylesheet" href="css/foto/foto-titulo.css">
+	<link rel="stylesheet" href="css/fotos.css">
+
 	<link href="js/render.js" rel="text/javascript/">
+
 	<!-- JS DO AJAX-->
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-		<!-- JS DO HEADER QUE SOME -->
-		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<!-- JS DO HEADER QUE SOME -->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
 	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed|Bungee|Suez+One&display=swap" rel="stylesheet"/>
-    <script>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed&display=swap" rel="stylesheet"/>
+
+	<script>
 		//carrega a pagina indicada 
 		$(document).ready(function(){
-			$("#box").hide();
-			$(".contatos").click(function(){
-				$("#box").load("contatos.html").fadeToggle().show();
-				$("#sobre").fadeOut();
-			});
-			$(".lojas").click(function(){
-				$("#box").load("lojas.html").fadeToggle().show();
-				$("#sobre").fadeOut();
-			});
-			$(".cardapio").click(function(){
-				$("#box").load("cardapio.html").fadeToggle().show();
-				$("#sobre").fadeOut();
-			});
-			$(".sobre").click(function(){
-				$("#box").hide();
-				$("#sobre").fadeIn();
+			$(".contato-pizza").click(function(){
+				$("#box").load("contatos.html");
 			});
 		});
+
+		//faz com que o header suma
+		$("header" ).click(function() {
+			$( this ).slideUp();
+		});
 	</script>
+		<script>
+			//carrega a pagina indicada 
+			$(document).ready(function(){
+				$(".cardapio-pizza").click(function(){
+					$("#box").load("cardapio1.html");
+				});
+			});
+	
+			//faz com que o header suma
+			$("header" ).click(function() {
+				$( this ).slideUp();
+			});
+		</script>
 	<link rel="icon" href="imagens/icon.png">
 	<title>A Brasileira - Pizzaria</title>
 </head>
 
 <body>
-	
-	<input type="checkbox" id="bt_menu">
-	<label for="bt_menu">&#9776;</label>
-
 	<!-- BOT -->
-	 <script
-            SameSite="none Secure"
-            src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"
-        ></script>
-        <script>
-            var myLandbot = new LandbotPopup({
-    index: 'https://landbot.io/u/H-365810-7ICM5VE91KH2D3BB/index.html',
-  });
-        </script>
+	<script
+		SameSite="none Secure"
+		src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"
+	></script>
+	<script>
+		var myLandbot = new LandbotPopup({
+		index: 'https://landbot.io/u/H-365810-7ICM5VE91KH2D3BB/index.html',
+		});
+	</script>
 	
-
 	<div class="menu">
+		<div class="container" onclick="myFunction(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
 		<div class="center">
 			<ul>
-				<li class="sobre"><a>Sobre</a></li>
-				<li class="cardapio"><a>Cardápio</a></li>
-				<li class="lojas"><a>Lojas</a></li>
-				<li class="contatos"><a>Contatos</a></li>
+				<a><li>Créditos</li></a>
+				<a><li>Sobre</li></a>
+				<a><li>Promoções</li></a>
+				<a class="loja"><li>Lojas</li></a>
+				<a class="cardapio-pizza"><li>Cardápio</li></a>
+				<a class="contato-pizza"><li>Contatos</li></a>
 			</ul>
 		</div>
 	</div>
 
 	<!-- HEADER DE APRESENTAÇÃO -->
-	<header id="sobre" class="hero-image" alt="Foto de pizza por Mahyar Motebassem">
+	<header id="sobre" class="hero-image">
 		<div class="hero-text">
-			<h1>A Brasileira!</h1>
+			<h1>A Brasileira</h1>
 			<p>A Brasileira é uma pizzaria que une o sabor que o brasileiro gosta com o preço que o brasileiro ama!</p>
 		</div>
 	</header>
@@ -99,12 +118,17 @@
 				<div class="email">
 					<span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; codamais.ej@gmail.com</span>
 					<div class="sociais">
-						<a href="https://www.instagram.com/codamais/" target="_blank"><i class="fa fa-instagram"></i></a>
-						<a href="https://br.linkedin.com/in/codamais-ej-do-ifb-595367197" target="_blank"><i class="fa fa-linkedin"></i></a>
+						<a href="www.instagram.com/codamais"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-facebook-square"></i></a>
+					</div>
+					<div>
+						<span>Fotos por:</span>
+						<a title="Visite a pagina do Mahyar Motebassem" href="https://unsplash.com/@mahyarmotebassem?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank"><span>Mahyar Motebassem</span></a>
 					</div>
 					<div>
 						Icons made by 
-						<a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+						<a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 					</div>
 				</div>
 			</div>
@@ -123,7 +147,6 @@
 					</button>
 				</form>
 			</div>
-
 		</div>
 
 		<div class="footer-fim">

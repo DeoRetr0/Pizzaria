@@ -1,0 +1,39 @@
+#ngaleriafotos {
+    margin-top: 3rem;
+    margin-left: 36%;
+    font-size: 2rem;
+    padding: 0px;
+    color: #000000;
+    font-family: Century, cursive;
+    font-size: 2.1875rem;
+    margin-bottom: 0rem;
+}
+.foto {
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0rem;
+    /*margin-top: 0.5rem;*/
+}
+
+
+@media screen and (min-width:0){
+    .foto {
+        margin-right: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .foto {
+        margin-right: 2.5rem;
+        width: calc(33.33% - 2.5rem);
+    }
+}
+
+@media screen and (min-width:992px) {
+    .foto {
+        margin-right: 5rem;
+        width: calc(25% - 5rem);
+    }
+}
