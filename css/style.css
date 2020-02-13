@@ -187,21 +187,50 @@ body{
   background: white;
   color: #212121;
   width: 100%;
-  position: relative;
   display: inline-block;
+  bottom: 0;
+  position: relative;
 }
 
 .footer .footer-conteudo{
-  display: flex;
+  display: wrap;
+  min-height: 200px;
+  padding: 10px;
 }
 
-.footer .footer-conteudo .footer-section{
+.footer-contato{
+  overflow:hidden;
+  margin:10px;
+  min-height:170px;
+}
+
+.footer .footer-conteudo .footer-sobre, .footer-contato{
   flex: 1;
   padding: 15pm;
   margin: 20px;
   margin-bottom: 0px;
   display: inline-block;
 }
+
+@media screen and (max-width: 400px) {
+  .footer-sobre { 
+   float: none;
+   margin-right:0;
+   width:auto;
+   border:0;
+ }
+}
+
+
+
+.footer-conteudo{
+box-sizing: border-box;
+width: 100%;
+text-align: left;
+padding: 20px 20px 20px 20px;
+}
+
+
 
 .footer .footer-fim{
   background: #212121;
@@ -214,11 +243,9 @@ body{
   left: 0px;
   padding-top: 10px;
 }
-/* AJUSTES */
 
-.footer-section p{
-  width: 500px;
-}
+
+/* AJUSTES */
 
 .form-group{
   width: 300px;
