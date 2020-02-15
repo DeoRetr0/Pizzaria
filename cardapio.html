@@ -151,10 +151,6 @@
         display: inline;
         padding: 2px;
     }  
-    .footer{
-        position: fixed;
-        height: 50px;
-    }
     @media screen and (min-width: 1024px){
         #conteudo{
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("imagens/fundo2.jpg");
@@ -179,13 +175,12 @@
         color: white;
         display: flex;
         padding: 50px;
-        margin-bottom: 20px;
+        height:max-content;
+        bottom: 0;
+    }
+    .footer{
+        position: relative;
+        margin-top: 1200px;
     }
     }
 </style>
-<script>
-    		$(document).ready(function(){
-                $(".footer-contato").remove()
-                $(".footer-conteudo").remove()
-            });
-</script>
