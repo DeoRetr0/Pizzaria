@@ -4,18 +4,9 @@
     <br/>
     <h3>Confira nossos endereços</h3>
     <div id="mapa"></div>
-    <script>
-      var mapa;
-      function initMap() {
-        mapa = new google.maps.Map(document.getElementById('mapa'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxnVakKMiwly9_i-apWuw3z301iezb-fk&callback=initMap">
-    </script>
+    <div style="--aspect-ratio: 16/9;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15359.790569197998!2d-47.8793589!3d-15.7539088!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3060d8a3139ab079!2sInstituto%20Federal%20de%20Bras%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1581793877635!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
 </div>
 
   <style>
@@ -30,13 +21,30 @@
       margin: 0 auto;
       color: white;
     }
-    #mapa {
-      width:auto;
-      margin: auto;
-      padding: 10px;
-      text-align: center;
-      height: 100%;
-    }
+    
+      [style*="--aspect-ratio"] > :first-child {
+        width: 100%;
+      }
+      [style*="--aspect-ratio"] > img {  
+        height: auto;
+      } 
+      @supports (--custom:property) {
+        [style*="--aspect-ratio"] {
+          position: relative;
+        }
+        [style*="--aspect-ratio"]::before {
+          content: "";
+          display: block;
+          padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }  
+        [style*="--aspect-ratio"] > :first-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+        }  
+      }
+
     html, body {
       height: 100%;
       margin: 0;
