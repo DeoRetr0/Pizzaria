@@ -1,138 +1,157 @@
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!--Bootstrap CSS/JS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	 crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-	 crossorigin="anonymous"></script>
-	<!-- CSS/JS -->
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="js/render.js" rel="text/javascript/">
-	<!-- JS DO AJAX-->
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<!-- JS DO HEADER QUE SOME -->
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed|Bungee|Suez+One&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap CSS/JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/982d993f59.js" crossorigin="anonymous"></script>
+    <!-- CSS/JS -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="js/render.js" rel="text/javascript/">
+    <!-- JS DO AJAX-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- JS DO HEADER QUE SOME -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto+Condensed|Bungee|Suez+One&display=swap"
+          rel="stylesheet"/>
     <script>
-		//carrega a pagina indicada 
-		$(document).ready(function(){
-			$("#box").hide();
-			$(".contatos").click(function(){
-				$("#box").load("contatos.html").show();
-				$("#sobre").hide();
-			});
-			$(".lojas").click(function(){
-				$("#box").load("lojas.html").show();
-				$("#sobre").hide();
-			});
-			$(".cardapio").click(function(){
-				$("#box").load("cardapio.html").show();
-				$("#sobre").hide();
-			});
-			$(".sobre").click(function(){
-				$("#sobre").fadeIn();
-				$("#box").hide();
-			});
-		});
-	</script>
-	<link rel="icon" href="imagens/icon.png">
-	<title>a Brasileira! - Pizzaria</title>
+        //carrega a pagina indicada
+        $(document).ready(function () {
+            $("#box").hide();
+            $(".contatos").click(function () {
+                $("#box").load("contatos.html").show();
+                $("#sobre").hide();
+            });
+            $(".lojas").click(function () {
+                $("#box").load("lojas.html").show();
+                $("#sobre").hide();
+            });
+            $(".cardapio").click(function () {
+                $("#box").load("cardapio.html").show();
+                $("#sobre").hide();
+            });
+            $(".sobre").click(function () {
+                $("#sobre").fadeIn();
+                $("#box").hide();
+            });
+        });
+    </script>
+    <link rel="icon" href="imagens/icon.png">
+    <title>a Brasileira! - Pizzaria</title>
 </head>
 
 <body>
-	
-	<!-- BOT -->
-	 <script
-            SameSite="none Secure"
-            src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"
-        ></script>
-        <script>
-            var myLandbot = new LandbotPopup({
-    index: 'https://landbot.io/u/H-365810-7ICM5VE91KH2D3BB/index.html',
-  });
-        </script>
-	
 
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand">🍕 a Brasileira!</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		  <span class="navbar-toggler-icon"></span>
-		</button>
-	  
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		  <ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
-			  <a class="sobre">Sobre</a>
-			</li>
-			<li class="nav-item active">
-				<a class="cardapio">Cardapio</a>
-			</li>
-			<li class="nav-item active">
-				<a class="lojas">Lojas</a>
-			</li>
-			<li class="nav-item active">
-				<a class="contatos">Contatos</a>
-			</li>
-		</div>
-	  </nav>
+<!-- BOT -->
+<script
+        SameSite="none Secure"
+        src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"
+></script>
+<script>
+    var myLandbot = new LandbotPopup({
+        index: 'https://landbot.io/u/H-365810-7ICM5VE91KH2D3BB/index.html',
+    });
+</script>
 
-	<!-- HEADER DE APRESENTAÇÃO -->
-	<header id="sobre" class="hero-image" alt="Foto de pizza por Mahyar Motebassem">
-		<div class="hero-text">
-			<h1>A Brasileira!</h1>
-			<p>A Brasileira é uma pizzaria que une o sabor que o brasileiro gosta com o preço que o brasileiro ama!</p>
-		</div>
-	</header>
+<nav class="navbar navbar-expand-lg navbar-light">
+	<div class="container">
+    <a class="navbar-brand">🍕 a Brasileira!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="sobre">Sobre</a>
+            </li>
+            <li class="nav-item active">
+                <a class="cardapio">Cardapio</a>
+            </li>
+            <li class="nav-item active">
+                <a class="lojas">Contatos</a>
+            </li>
+        </ul>
+    </div>
+	</div>
+</nav>
+
+<!-- HEADER DE APRESENTAÇÃO -->
+<div id="sobre" class="container" alt="Foto de pizza por Mahyar Motebassem">
+    <div class="hero-text">
+        <h1>A Brasileira!</h1>
+        <p>A Brasileira é uma pizzaria que une o sabor que o brasileiro gosta com o preço que o brasileiro ama!</p>
+    </div>
+</div>
+<div class="container">
 
 	<!-- AS OUTRAS PAGINAS SÃO CARREGADAS AQUI DENTRO -->
-	<div id="box"></div>
+<div id="box"></div>
+</div>
 
-	<footer class="footer">
-		<div class="footer-conteudo">
-			<div class="footer-sobre">
-				<img id="logo" src="imagens/Codamais-logo.png" alt="Logo da CodaMais"/>
-				<p>Formada por estudantes do curso de Sistemas para Internet, a empresa
-					busca trazer serviços de qualidade a preços que cabem no bolso!
-				</p>
-				<div class="email">
-					<span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; codamais.ej@gmail.com</span>
-					<div class="sociais">
-						<a href="https://www.instagram.com/codamais/" target="_blank"><i class="fa fa-instagram"></i></a>
-						<a href="https://br.linkedin.com/in/codamais-ej-do-ifb-595367197" target="_blank"><i class="fa fa-linkedin"></i></a>
-					</div>
-					<div>
-						Icons made by 
-						<a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-					</div>
-				</div>
-			</div>
-			<div class="footer-contato">
-				<h2>Fale conosco!</h2>
-				<form action="index.html" method="post">
-					<div class="form-group">
-						<input type="email" name="email" class="form-control" placeholder="Insira seu email..."/>
-					</div>
-					<div class="form-group">
-						<textarea name="mensagem" class="form-control" placeholder="O que quer nos dizer?"></textarea>
-					</div>
-					<button type="submit" class="btn btn-big">
-					<i class="fa fa-envelope"></i>
-					Enviar
-					</button>
-				</form>
-			</div>
-		</div>
-		<div class="footer-fim">
-			&copy; CodaMais+ 2020
-		</div>
-	</footer>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <img id="logo" src="imagens/Codamais-logo.png " alt="Logo da CodaMais" style="size: initial">
+                <p>Formada por estudantes do curso de Sistemas para Internet, a empresa
+                    busca trazer serviços de qualidade a preços que cabem no bolso!
+                </p>
+                <div class="email">
+                    <div class="sociais">
+                        <a href="https://www.instagram.com/codamais/" target="_blank"><i class="fab fa-instagram fa-2x"
+                                                                                         aria-hidden="true"></i></a>
+                        <a href="https://br.linkedin.com/in/codamais-ej-do-ifb-595367197" target="_blank"><i
+                                class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i></a>
+                        <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                        <span><i class="fas fa-envelope fa-2x" aria-hidden="true"></i>&nbsp; <strong>codamais.ej@gmail.com</strong></span>
+                    </div>
+                    <p>SGAN Quadra 610, Prédio Administrativo do IFB - Sala 111
+                        <br>
+                        Asa Norte, Brasília</p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-12">
+                <h2>Fale conosco!</h2>
+                <form action="https://formspree.io/mbjkprjd" method="POST">
+                    <div class="form-group">
+                        <input type="email" name="E-mail" id="email" class="form-control"
+                               placeholder="Insira seu email...">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Assunto" id="assunto" class="form-control" placeholder="Assunto">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="Mensagem" id="mensagem" class="form-control"
+                                  placeholder="O que quer nos dizer?"></textarea>
+                    </div>
+                    <div class="status"></div>
+                    <button type="submit" id="enviar" class="btn btn-big">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+		<p style="text-align: center">
+			© CodaMais+ 2020
+		</p>
+    </div>
+</footer>
 </body>
 </html>
